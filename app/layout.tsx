@@ -4,6 +4,9 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import { ThemeProvider } from "@/components/provider/theme-provider";
 import { cn } from "@/lib/utils";
+import { ModalProvider } from "@/components/provider/modal-provider";
+import { SocketProvider } from "@/components/provider/socket-provider";
+import { QueryProvider } from "@/components/provider/query-provider";
 
 const font = Open_Sans({ subsets: ["latin"] });
 
@@ -32,7 +35,10 @@ export default function RootLayout({
             enableSystem={false}
             storageKey="horizon-theme"
           >
-            {children}
+            <SocketProvider>
+              <ModalProvider />
+              <QueryProvider>{children}</QueryProvider>
+            </SocketProvider>
           </ThemeProvider>
         </body>
       </html>
