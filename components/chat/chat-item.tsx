@@ -108,6 +108,7 @@ function ChatItem({
     form.reset({
       content,
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [content]);
 
   useEffect(() => {

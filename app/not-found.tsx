@@ -8,7 +8,7 @@ export default function NotFound() {
     <div className="text-center w-screen h-screen flex flex-col items-center justify-center">
       <h1 className="mb-4 text-6xl font-semibold text-indigo-500">404</h1>
       <p className="mb-4 text-lg text-gray-600 dark:text-white">
-        Oops! Looks like you're lost.
+        Oops! Looks like you are lost.
       </p>
       <div className="animate-bounce">
         <svg
@@ -26,7 +26,7 @@ export default function NotFound() {
         </svg>
       </div>
       <p className="mt-4 text-gray-600 dark:text-white ">
-        Let's get you back
+        Let `&apos` get you back
         <Link href="/" className="pl-5">
           <Button variant={"primary"}>
             <Home size={16} /> Home
